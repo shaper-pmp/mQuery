@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="text/javascript" src="mquery.js"></script>
+<script type="text/javascript">
+	function dump(val) {
+		if(typeof console != "undefined") {
+			console.log(val);
+		}
+		else {
+			document.getElementById("output").innerHTML += "<br />"+val;
+		}
+	}
+	
+	function update() {
+		mQuery.init();
+		document.getElementById('output').innerHTML = 'Supported media types: <span class=\'success\'>'+mQuery.mediaTypes+'</span>';
+	}
+
+</script>
+<style type="text/css">
+.output {
+	border: 1px solid #c0c0c0;
+	margin: 1em 0;
+	padding: 0.5em;
+}
+.success {
+	color: #008000;
+}
+.failure  {
+	color: #800000;
+}
+</style>
+</head>
+<body>
+
+<input type="button" onclick="update();" value="Detect media types" />
+
+<div id="output" class="output"></div>
+
+<input id='input_query' type="text" value="screen and (width < 100), handheld or print" size="70" />
+<input type="button" onclick="mQuery.query(document.getElementById('input_query').value);document.getElementById('mq_result').innerHTML = '<strong>Tokens:</strong><br />' + mQuery.tokens.join('<br />');" value="Execute media query" />
+<div id="mq_result" class="output"></div>
+
+</body>
+</html>
