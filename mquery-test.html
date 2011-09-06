@@ -1,4 +1,4 @@
-<html>
+<fhtml>
 <head>
 <script type="text/javascript" src="mquery.js"></script>
 <script type="text/javascript">
@@ -29,6 +29,33 @@
 .failure  {
 	color: #800000;
 }
+
+.container {
+	text-align:center;
+}
+.parent {
+	border-bottom: 2px solid #e0e0e0;	
+	margin: 0px -2px;
+}
+
+.child {
+	width:50%;
+	float:left;
+	margin: 0px -2px;
+	border-left: 2px solid #e0e0e0;
+	border-right: 2px solid #e0e0e0;
+}
+
+.recurse {
+	font-size: smaller;
+	width: 50%;
+	margin-left: 50%;
+}
+
+hr {
+	clear:both;
+	margin: 2em 0;
+}
 </style>
 </head>
 <body>
@@ -36,9 +63,10 @@
 <input type="button" onclick="update();" value="Detect media types" />
 
 <div id="output" class="output"></div>
-
-<input id='input_query' type="text" value="screen and (width < 100), handheld or print" size="70" />
-<input type="button" onclick="mQuery.query(document.getElementById('input_query').value);document.getElementById('mq_result').innerHTML = '<strong>Tokens:</strong><br />' + mQuery.tokens.join('<br />');" value="Execute media query" />
+<!-- screen and (device-width < 100), handheld or print -->
+<input id='input_query' type="text" value="1+2*(3+4)" size="70" />
+<input type="button" onclick="document.getElementById('mq_result').innerHTML=''; mQuery.query(document.getElementById('input_query').value, false);" value="Execute media query" />
+<input type="button" onclick="document.getElementById('mq_result').innerHTML=''; mQuery.query(document.getElementById('input_query').value, true);" value="Execute media query (show workings)" />
 <div id="mq_result" class="output"></div>
 
 </body>

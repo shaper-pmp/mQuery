@@ -2,7 +2,7 @@
 			
 **Coming soon...**
 			
-A library exposing CSS media query functionality to javascript, for by-media targeting of behaviour as well as style.  Anticipated to be especially useful in conjunction with [codomins](https://github.com/shaper-pmp/codomins), for by-media and by-browser-capability conditional loading of javascript (eg, for rich client widgets that are desired on graphical desktop machines, but which are too heavyweight or otherwise inappropriate for more limited/mobile devices).
+A library exposing CSS media query functionality to javascript, for by-media targeting of behaviour as well as style.  Anticipated to be especially useful in conjunction with [codomins](http://www.shaper-labs.com/projects/codomins/), for by-media and by-browser-capability conditional loading of javascript (eg, for rich client widgets that are desired on graphical desktop machines, but which are too heavyweight or otherwise inappropriate for more limited/mobile devices).
 			
 ##Status##
 			
@@ -34,4 +34,8 @@ Expected syntax:
 
 ##Work in progress##
 
-A very quick testing page (`mquery-test.html`) is included for convenience in the repository.
+A very quick testing page ([mquery-test.html](http://www.shaper-labs.com/projects/mquery/mquery-test.html)) is included for convenience in the repository.
+
+##Source Code##
+
+Work-in-progress mQuery source code is available [on github](http://www.github.com/shaper-pmp/mquery).
