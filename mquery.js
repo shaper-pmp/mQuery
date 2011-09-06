@@ -172,7 +172,7 @@ var mQuery = function () {
 							root = newitem;	// Move down one level until we hit the next value
 						}
 						else {
-							console.log(newitem.value);
+							//console.log(newitem.value);
 							newitem.leftchild = root.rightchild;	root.rightchild.parent = newitem;
 							root.rightchild = newitem;	newitem.parent = root;
 							root = newitem;	// Move down one level until we hit the next value
